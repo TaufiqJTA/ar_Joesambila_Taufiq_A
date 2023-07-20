@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+
+    <body>
+        <a-scene embedded arjs>
+            <a-assets>
+                <img id="my-image" src="https://localhost/asset/image/Taufiq1.jpeg">
+            </a-assets>
+            <a-marker preset="custom"type="pattern"url="https://localhost/asset/pattern/pattern-asia.patt">
+                <a-sphere material="src:#earth"position="0 1 0"animation="property:rotation;from:0 0 0; to: 0 0 360; loop:true"></a-sphere>
+                <a-entity gltf-model="https://localhost/asset/model/viking.glb"scale="30 30 30"position="0 10 20"rotation="0 90 270"></a-entity>
+            </a-marker>
+            <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+
+<html>
+    
